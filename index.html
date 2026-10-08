@@ -5,8 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home | Kung Fu Loung</title>
 <link rel="stylesheet" href="style.css">
+<style>
+.hp-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.hp-btns a,.hp-card .view,.sticky-buy{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:6px;font-weight:600;text-decoration:none;box-sizing:border-box}
+.hp-btns .btn-primary,.hp-card .btn-primary,.sticky-buy{background:#c0392b;color:#fff;border:2px solid #c0392b}
+.hp-btns .btn-secondary{background:#fff;color:#5b3a8c;border:2px solid #5b3a8c}
+.hp-hero-sub{max-width:620px;margin:16px auto 0;color:#2c3e50;font-size:18px}
+.trust{background:#f6f3fa;border-top:3px solid #5b3a8c;border-bottom:3px solid #2e6bb0;text-align:center;padding:24px 20px;margin:40px 0}
+.trust p{margin:4px 0;color:#2c3e50}
+.trust strong{color:#5b3a8c}
+.tutorials{margin:50px 0}
+.tutorials h2{text-align:center;font-weight:400;color:#2c3e50}
+.tutorials .intro{text-align:center;color:#8a97a5;margin-bottom:28px}
+.hp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.hp-card{border:1px solid #e1e5ea;border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.hp-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#eef1f5}
+.hp-card .body{padding:16px;display:flex;flex-direction:column;flex:1}
+.hp-card h3{margin:0 0 6px;font-size:18px;color:#2c3e50}
+.hp-card p{margin:0 0 12px;color:#555;font-size:15px}
+.hp-card .price{font-weight:700;color:#c0392b;margin-top:auto;margin-bottom:12px}
+.hp-card .price.free{color:#2e6bb0}
+.sticky-buy{position:fixed;top:12px;right:12px;z-index:100;min-height:44px;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.sticky-buy.show{opacity:1;pointer-events:auto}
+@media(max-width:760px){.hp-grid{grid-template-columns:1fr}.hp-btns a{width:100%}}
+</style>
 </head>
 <body>
+<a class="sticky-buy btn-primary" id="stickyBuy" href="#tutorials">Buy Tutorials</a>
 <header class="site-header">
 <div class="logo"><a href='/'><img src="images/logo.png" alt="Kung Fu Loung"></a></div>
 <nav class="main-nav"><ul><li><a class='active' href='/'>Home</a></li><li><a href='/blog'>Blog</a></li><li><a href='/about'>About</a></li><li><a href='/qa-support'>Q&amp;A Support</a></li></ul></nav>
@@ -15,8 +40,30 @@
 <div class="hero">
 <h1>The Legacy of Chinese Kung-Fu</h1>
 <p class="subtitle">To Pass on and promote the essence of Traditional Chinese Kung-Fu</p>
+<p class="hp-hero-sub">Learn authentic kung-fu forms step by step from Master Jou, with 54 years of martial arts experience. Watch free previews on YouTube, then get the full tutorials as digital downloads.</p>
+<div class="hp-btns">
+<a class="btn-primary" href="#tutorials">Browse Tutorials</a>
+<a class="btn-secondary" href="https://www.youtube.com/results?search_query=Kung+Fu+Loung" target="_blank" rel="noopener">Watch on YouTube</a>
 </div>
-<div class="columns-3">
+</div>
+<div class="trust">
+<p><strong>Master Jou, 54 years of martial arts practice and teaching</strong></p>
+<p>Traditional Chinese Kung-Fu, passed down through lineage. Trusted by kung-fu students worldwide.</p>
+</div>
+<section class="tutorials" id="tutorials">
+<h2>Tutorial Series</h2>
+<p class="intro">Pick a series, preview it free on YouTube, and learn at your own pace.</p>
+<div class="hp-grid card-grid">
+<div class="hp-card"><a href="kfl008-xiao-jia-zi.html"><img src="https://img.youtube.com/vi/XZnlrdwEK-0/hqdefault.jpg" alt="KFL~008 Xiao Jia Zi preview" loading="lazy"></a><div class="body"><h3>KFL~008 Xiao Jia Zi</h3><p>Small frame form, a foundation set of the tradition.</p><div class="price free">Free on YouTube</div><a class="view btn-secondary" href="kfl008-xiao-jia-zi.html" style="border:2px solid #5b3a8c;color:#5b3a8c">View Series</a></div></div>
+<div class="hp-card"><a href="kfl009-da-jia-zi.html"><img src="https://img.youtube.com/vi/-L6pNCRJgsk/hqdefault.jpg" alt="KFL~009 Da Jia Zi preview" loading="lazy"></a><div class="body"><h3>KFL~009 Da Jia Zi</h3><p>Big frame form, building on the small frame foundation.</p><div class="price free">Free on YouTube</div><a class="view btn-secondary" href="kfl009-da-jia-zi.html" style="border:2px solid #5b3a8c;color:#5b3a8c">View Series</a></div></div>
+<div class="hp-card"><a href="kfl010-bai-yuan-tou-tao.html"><img src="https://img.youtube.com/vi/7eD5ZB_z1ps/hqdefault.jpg" alt="KFL~010 Bai Yuan Tou Tao preview" loading="lazy"></a><div class="body"><h3>KFL~010 Bai Yuan Tou Tao</h3><p>Bai Yuan Tou Tao form, taught step by step.</p><div class="price free">Free on YouTube</div><a class="view btn-secondary" href="kfl010-bai-yuan-tou-tao.html" style="border:2px solid #5b3a8c;color:#5b3a8c">View Series</a></div></div>
+<div class="hp-card"><a href="kfl020-xiao-hu-yan.html"><img src="https://img.youtube.com/vi/99xzvusWQsY/hqdefault.jpg" alt="KFL~020 Xiao Hu Yan preview" loading="lazy"></a><div class="body"><h3>KFL~020 Xiao Hu Yan</h3><p>Little Tiger Swallow, often the first formal Praying Mantis form.</p><div class="price">10 parts, $90 total (from $9 per part)</div><a class="view btn-secondary" href="kfl020-xiao-hu-yan.html" style="border:2px solid #5b3a8c;color:#5b3a8c">View Series</a></div></div>
+<div class="hp-card"><a href="kfl021-li-pi-quan.html"><img src="https://img.youtube.com/vi/y9kP67BteT8/hqdefault.jpg" alt="KFL~021 Li Pi Quan preview" loading="lazy"></a><div class="body"><h3>KFL~021 Li Pi Quan</h3><p>Li Pi Quan (Power Splitting), taught in 10 parts.</p><div class="price">10 parts, $90 total (from $9 per part)</div><a class="view btn-secondary" href="kfl021-li-pi-quan.html" style="border:2px solid #5b3a8c;color:#5b3a8c">View Series</a></div></div>
+<div class="hp-card"><a href="kfl022-ye-di-cang-hua.html"><img src="https://img.youtube.com/vi/2q0lcm8s_ng/hqdefault.jpg" alt="KFL~022 Ye Di Cang Hua preview" loading="lazy"></a><div class="body"><h3>KFL~022 Ye Di Cang Hua</h3><p>Ye Di Cang Hua (Hidden Flower), taught in 10 parts.</p><div class="price">10 parts, $90 total (from $9 per part)</div><a class="view btn-secondary" href="kfl022-ye-di-cang-hua.html" style="border:2px solid #5b3a8c;color:#5b3a8c">View Series</a></div></div>
+
+</div>
+</section>
+<div class="columns-3" style="margin-top:40px">
 <div class="column">
 <a href='/hall-of-kung-fu'><img src="images/wu.png" alt="Hall of Kung-Fu"></a>
 <h2>&ldquo;Hall of Kung-Fu&rdquo;</h2>
@@ -38,5 +85,8 @@
 <p>Copyright &copy; 2014 Kung-Fu Loung Masscommunication Co,. LTD., All rights reserved.</p>
 </footer>
 <!-- kfl-deploy-test 20261007 -->
+<script>
+(function(){var b=document.getElementById('stickyBuy');function f(){b.classList.toggle('show',window.scrollY>300)}window.addEventListener('scroll',f,{passive:true});f()})();
+</script>
 </body>
 </html>
