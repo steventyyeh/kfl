@@ -122,7 +122,8 @@ a:hover { text-decoration: underline; }
   text-align: center; font-size: 17px; color: #2c3e50;
   font-weight: 600; margin: 25px 0;
 }
-.video-embed { text-align: center; margin: 30px 0; }
+.video-embed { text-align: center; margin: 30px 0; max-width: 800px; margin-left: auto; margin-right: auto; }
+.video-embed iframe, .video-embed video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; background: #000; }
 .video-embed a {
   display: inline-block; padding: 12px 28px;
   background: #2c3e50; color: #fff; border-radius: 4px;
@@ -159,6 +160,45 @@ a:hover { text-decoration: underline; }
   margin-top: 40px;
 }
 .site-footer p { font-size: 13px; color: #aab4bd; }
+
+/* Shared components (kfl-5) */
+.btn-primary, .btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 12px 28px;
+  font-size: 16px; font-weight: 600; line-height: 1.2;
+  border-radius: 6px; border: 2px solid #c62828;
+  text-align: center; cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-primary { background: #c62828; color: #fff; }
+.btn-primary:hover { background: #a31f1f; border-color: #a31f1f; color: #fff; text-decoration: none; }
+.btn-secondary { background: #fff; color: #c62828; }
+.btn-secondary:hover { background: #fdecea; color: #a31f1f; text-decoration: none; }
+.btn-primary:focus-visible, .btn-secondary:focus-visible { outline: 3px solid #2c5aa0; outline-offset: 2px; }
+
+.price-block { text-align: center; margin: 25px 0; }
+.price-block .price { display: block; font-size: 40px; font-weight: 700; color: #2c3e50; line-height: 1.1; }
+.price-block .price-was { font-size: 20px; color: #8a97a5; text-decoration: line-through; margin-right: 8px; }
+.price-block .price-note { display: block; margin-top: 6px; font-size: 14px; color: #8a97a5; }
+
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 30px 0; }
+.card-grid > * {
+  border: 1px solid #ecf0f1; border-radius: 8px; padding: 20px;
+  background: #fff; min-width: 0;
+}
+
+.sticky-cta {
+  position: sticky; bottom: 0; z-index: 10;
+  background: #fff; border-top: 1px solid #ecf0f1;
+  padding: 10px 20px; text-align: center;
+}
+.main-nav a.nav-tutorials { color: #6c3483; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .btn-primary, .btn-secondary { width: 100%; }
+}
 
 @media (max-width: 700px) {
   .columns-3 { flex-direction: column; align-items: center; }
