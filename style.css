@@ -1,0 +1,167 @@
+/* Kung Fu Loung - rebuilt to match original Weebly design */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #5d6d7e;
+  line-height: 1.6;
+  font-size: 15px;
+}
+a { color: #2c3e50; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 40px 20px 0;
+}
+.site-header .logo img {
+  max-width: 449px;
+  width: 100%;
+  height: auto;
+}
+.main-nav {
+  margin-top: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ecf0f1;
+}
+.main-nav ul {
+  list-style: none;
+  display: inline-block;
+}
+.main-nav li { display: inline; margin: 0 22px; }
+.main-nav a {
+  font-size: 16px;
+  color: #b0b8c1;
+  letter-spacing: 0.3px;
+}
+.main-nav a:hover { color: #2c3e50; text-decoration: none; }
+.main-nav a.active { color: #2c3e50; }
+
+/* Content */
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+.hero { text-align: center; margin-bottom: 50px; }
+.hero h1 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+.hero .subtitle {
+  font-size: 16px;
+  color: #8a97a5;
+}
+.page-title { text-align: center; margin-bottom: 40px; }
+.page-title h1 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+.page-title .subtitle { font-size: 16px; color: #8a97a5; }
+
+/* Three columns */
+.columns-3 {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.column {
+  flex: 1;
+  min-width: 240px;
+  max-width: 300px;
+  text-align: center;
+}
+.column img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.column h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+.column p { font-size: 14px; color: #5d6d7e; line-height: 1.7; }
+
+/* Article content */
+.article { max-width: 800px; margin: 0 auto; }
+.article h2 {
+  font-size: 22px; color: #2c3e50; font-weight: 600;
+  margin: 30px 0 12px;
+}
+.article h3 {
+  font-size: 18px; color: #2c3e50; font-weight: 600;
+  margin: 24px 0 10px;
+}
+.article p { margin-bottom: 16px; }
+.article ul, .article ol { margin: 0 0 16px 24px; }
+.article li { margin-bottom: 8px; }
+.article img.content-img {
+  max-width: 100%; height: auto; display: block;
+  margin: 20px auto;
+}
+
+/* Tutorial product layout */
+.product-header { text-align: center; margin-bottom: 30px; }
+.product-header img {
+  max-width: 400px; width: 100%; height: auto;
+  margin-bottom: 15px;
+}
+.product-meta { font-size: 14px; color: #8a97a5; margin-bottom: 8px; }
+.pricing {
+  text-align: center; font-size: 17px; color: #2c3e50;
+  font-weight: 600; margin: 25px 0;
+}
+.video-embed { text-align: center; margin: 30px 0; }
+.video-embed a {
+  display: inline-block; padding: 12px 28px;
+  background: #2c3e50; color: #fff; border-radius: 4px;
+  font-size: 15px;
+}
+.video-embed a:hover { background: #1a252f; text-decoration: none; }
+.gumroad-links { margin: 30px 0; text-align: center; }
+.gumroad-links h3 { margin-bottom: 15px; }
+.gumroad-links a {
+  display: inline-block; margin: 6px;
+  padding: 10px 20px; border: 1px solid #d5dbdb;
+  border-radius: 4px; color: #2c3e50; font-size: 14px;
+}
+.gumroad-links a:hover { background: #f8f9f9; text-decoration: none; }
+.gumroad-embeds {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+.gumroad-product-embed { min-height: 120px; }
+
+/* Sitemap */
+.sitemap { columns: 3; column-gap: 40px; margin-top: 30px; }
+.sitemap h3 { font-size: 16px; color: #2c3e50; margin: 16px 0 8px; }
+.sitemap ul { list-style: none; margin: 0 0 12px 0; }
+.sitemap li { margin-bottom: 6px; font-size: 14px; break-inside: avoid; }
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid #ecf0f1;
+  margin-top: 40px;
+}
+.site-footer p { font-size: 13px; color: #aab4bd; }
+
+@media (max-width: 700px) {
+  .columns-3 { flex-direction: column; align-items: center; }
+  .main-nav li { margin: 0 12px; }
+  .sitemap { columns: 1; }
+}
